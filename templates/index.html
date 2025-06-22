@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitLife AI – Seu parceiro de saúde e bem-estar</title>
+
+  <!-- Fonte Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-p/w1YkDdPp6Z4qV6QN7Ww7k2TSz4AbWNOfM7X28kxG9I3kjvkaG8GcT6rZjn5wtgMcya+V+nejV1XvwYQVXV1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <!-- Estilos específicos para header com ícones -->
+  <style>
+    header nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      z-index: 100;
+      padding: 0.5rem 1rem;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li + li {
+      margin-left: 1.5rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #004D40;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color .2s;
+    }
+    .nav-links a:hover {
+      color: #00796B;
+    }
+    .nav-icons {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-icons li + li {
+      margin-left: 1rem;
+    }
+    .nav-icons a {
+      color: #004D40;
+      font-size: 1.25rem;
+      transition: color .2s;
+    }
+    .nav-icons a:hover {
+      color: #00796B;
+    }
+    /* garante espaço do header */
+    main { padding-top: 100px; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('login') }}"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        <li><a href="{{ url_for('signup') }}"><i class="fas fa-user-plus"></i> Cadastrar-se</a></li>
+      </ul>
+      <ul class="nav-icons">
+        <li><a href="#workouts"><i class="fas fa-dumbbell"></i></a></li>
+        <li><a href="#nutrition"><i class="fas fa-carrot"></i></a></li>
+        <li><a href="#community"><i class="fas fa-users"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO DE BOAS-VINDAS -->
+    <section id="home">
+      <h1>Seja bem-vindo ao FitLife AI!</h1>
+      <p>Seu parceiro de saúde e bem-estar</p>
+      <a href="{{ url_for('signup') }}" class="btn-cta">Crie sua conta</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FitLife AI. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

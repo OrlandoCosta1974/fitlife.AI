@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard – FitLife AI</title>
+
+  <!-- Fonte e CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" 
+    rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('home') }}#home">Início</a></li>
+        <li><a href="{{ url_for('home') }}#workouts">Treinos</a></li>
+        <li><a href="{{ url_for('home') }}#nutrition">Nutrição</a></li>
+        <li><a href="{{ url_for('home') }}#community">Comunidade</a></li>
+        <li><a href="{{ url_for('logout') }}">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO DE BOAS-VINDAS (reuso do estilo #home) -->
+    <section id="home">
+      <h1>Bem-vindo, {{ user_name }}!</h1>
+      <p>ao FitLife AI, Seu parceiro de saúde e bem-estar</p>
+    </section>
+
+    <!-- MESMO BLOCO DE CARDS DE TREINOS -->
+    <section id="workouts">
+      <h2>Treinos personalizados</h2>
+      <p>Encontre o treino perfeito para você</p>
+      <div class="workout-cards">
+        <div class="workout-card">
+          <h3>Treino de força</h3>
+          <p>Desenvolva sua força e resistência</p>
+        </div>
+        <div class="workout-card">
+          <h3>Treino de cardio</h3>
+          <p>Melhore sua resistência cardiovascular</p>
+        </div>
+        <div class="workout-card">
+          <h3>Treino de flexibilidade</h3>
+          <p>Aumente sua flexibilidade e mobilidade</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MESMO BLOCO DE CARDS DE NUTRIÇÃO -->
+    <section id="nutrition">
+      <h2>Nutrição saudável</h2>
+      <p>Encontre receitas saudáveis e dicas de nutrição</p>
+      <div class="nutrition-cards">
+        <div class="nutrition-card">
+          <h3>Receitas saudáveis</h3>
+          <p>Encontre receitas deliciosas e saudáveis</p>
+        </div>
+        <div class="nutrition-card">
+          <h3>Dicas de nutrição</h3>
+          <p>Aprenda a se alimentar de forma saudável</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MESMO BLOCO DE CARDS DE COMUNIDADE -->
+    <section id="community">
+      <h2>Comunidade FitLife AI</h2>
+      <p>Conecte-se com outros usuários e compartilhe suas experiências</p>
+      <div class="community-cards">
+        <div class="community-card">
+          <h3>Fórum de discussão</h3>
+          <p>Participe de discussões sobre saúde e bem-estar</p>
+        </div>
+        <div class="community-card">
+          <h3>Grupos de apoio</h3>
+          <p>Encontre grupos de apoio para alcançar seus objetivos</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FitLife AI. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,261 @@
+/* ========== RESET & GLOBAL ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #E8F5E9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ========== HEADER & NAV ========== */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #FFF;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+nav li + li {
+  margin-left: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #004D40;
+  font-weight: 600;
+  transition: color .2s;
+}
+
+nav a:hover {
+  color: #00796B;
+}
+
+/* Espaço abaixo do header fixo */
+main {
+  padding-top: 80px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ========== SEÇÃO HERO (#home) ========== */
+#home {
+  background: linear-gradient(135deg, #B2DFDB 0%, #80CBC4 100%);
+  padding: 100px 20px;
+  text-align: center;
+  border-radius: 0 0 50% 50% / 0 0 10% 10%;
+  margin-bottom: 3rem;
+}
+
+#home h1 {
+  font-size: 3rem;
+  color: #004D40;
+  margin-bottom: .5rem;
+}
+
+#home p {
+  font-size: 1.25rem;
+  color: #00695C;
+  margin-bottom: 1.5rem;
+}
+
+.btn-cta {
+  display: inline-block;
+  background: #00796B;
+  color: #FFF;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background-color .3s, transform .3s;
+}
+
+.btn-cta:hover {
+  background-color: #004D40;
+  transform: translateY(-3px);
+}
+
+/* ========== SEÇÕES DE CARDS ========== */
+section {
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #004D40;
+  margin-bottom: 1rem;
+}
+
+section p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+
+.workout-cards,
+.nutrition-cards,
+.community-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.workout-card,
+.nutrition-card,
+.community-card {
+  background: #FFF;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.workout-card h3,
+.nutrition-card h3,
+.community-card h3 {
+  color: #00796B;
+  margin-bottom: .75rem;
+}
+
+.workout-card p,
+.nutrition-card p,
+.community-card p {
+  color: #555;
+}
+
+.workout-card:hover,
+.nutrition-card:hover,
+.community-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+}
+
+/* ========== FORMULÁRIO DE CADASTRO ========== */
+#signup {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+#signup h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  color: #222;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.signup-form label {
+  font-weight: 600;
+}
+
+.signup-form input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.signup-form button {
+  padding: 0.75rem;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.signup-form button:hover {
+  background-color: #218838;
+}
+
+#signup p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#signup p a {
+  color: #00796B;
+  text-decoration: none;
+}
+
+#signup p a:hover {
+  text-decoration: underline;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #666;
+  font-size: .9rem;
+  border-top: 1px solid #DDE2E6;
+}
+
+/* Container de cards em grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+}
+
+/* Estilo geral dos cards */
+.card {
+  display: block;
+  background: #FFF;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .3s, box-shadow .3s;
+  cursor: pointer;
+}
+
+/* Título do card */
+.card h3 {
+  margin-bottom: .75rem;
+  color: #00796B;
+}
+
+/* Descrição */
+.card p {
+  color: #555;
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+}
